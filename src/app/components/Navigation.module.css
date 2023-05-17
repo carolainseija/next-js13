@@ -1,14 +1,18 @@
-.header{
-    border:  1px solid #f0f0f0;
-    border-radius: 4px;
-    padding: 4px;
-}
-.navigatin {
-    display: flex;
-    list-style: none;
+.header {
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  padding: 4px;
 }
 
-.navigatin a:hover {
-    color: #f0f0f0;
-    text-decoration: underline;
+.navigation {
+  color: #f0f0f0;
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.navigation a:hover {
+  color: #09f;
+  text-decoration: underline;
 }
