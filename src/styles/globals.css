@@ -16,7 +16,7 @@
   }
 
 h3 {
-    color: blue;
+    color: #FFF;
 }
 
 p {
@@ -31,4 +31,12 @@ p {
   border-color: transparent;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.titles {
+  color: #fff;
+}
+
+.text-white {
+  color: #FFF;
 }

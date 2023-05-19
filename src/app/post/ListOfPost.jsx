@@ -11,12 +11,13 @@ function fetchPost() {
   return fetch("https://jsonplaceholder.typicode.com/posts", {
     next: { revalidate: 60 },
   }) //Incremental tatics Generation
-    .then((res) => res.json());
+    .then((res) => res.json())
 }
 
 export default async function ListOfPost() {
   const posts = await fetchPost();
-  return posts.slice(0, 3).map((post) => (
+
+  return posts.slice(0, 5).map(post => (
     <article key={post.id}>
       <Link href="/post/[id]" as={`/post/${post.id}`}>
         <h3 style={{ color: "#09f" }}>{post.title}</h3>
@@ -24,8 +25,11 @@ export default async function ListOfPost() {
         <LikeButton id={post.id} />
       </Link>
     </article>
-  ));
+  ))
 }
+
+
+// 1:24
 
 /*
 En una ruta estática , los componentes se representan en el servidor en el momento de la compilación.
